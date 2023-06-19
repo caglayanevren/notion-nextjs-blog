@@ -13,7 +13,7 @@ export default function PostCard({
 }) {
   return (
     <Link href={`/blog/${slug}`}>
-      <article className="mx-auto flex flex-col overflow-hidden rounded-xl shadow-xl shadow-gray-400 transition-all duration-300 hover:scale-[1.05] hover:shadow-2xl dark:shadow-black">
+      <article className="mx-auto flex flex-col overflow-hidden rounded-xl shadow-xl shadow-gray-400 transition-all duration-300 hover:scale-[1.005] hover:shadow-2xl dark:shadow-black">
         <div className="relative h-60">
           <Image
             src={cover}
