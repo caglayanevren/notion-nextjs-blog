@@ -19,8 +19,9 @@ export default function PostsGrid({ allPosts }: { allPosts: Post[] }) {
       {posts.length ? (
         <ul
           id="posts-grid"
-          className="grid w-full grid-cols-1 gap-x-8 gap-y-32 md:grid-cols-2 xl:grid-cols-3"
+          className="grid w-full grid-cols-1 gap-x-8 gap-y-32"
         >
+          {/*  md:grid-cols-2 xl:grid-cols-3 */}
           {posts.map((post) => (
             <li key={post.slug}>
               <PostCard post={post} />
