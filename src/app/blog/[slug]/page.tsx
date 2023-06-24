@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 import NotionPage from '@/components/notion-page';
-import RelatedPosts from '@/components/posts/related-posts';
+//import RelatedPosts from '@/components/posts/related-posts';
 import { getRecordMap } from '@/libs/notion';
 import { getAllPostsFromNotion } from '@/services/posts';
 import { Post } from '@/types/post';
@@ -36,10 +36,10 @@ export default async function PostPage({
     );
   }
 
-  const relatedPosts: Post[] = allPosts.filter(
+  /* const relatedPosts: Post[] = allPosts.filter(
     (p) =>
       p.slug !== slug && p.categories.some((v) => post.categories.includes(v))
-  );
+  ); */
 
   const recordMap = await getRecordMap(post.id);
 
@@ -59,7 +59,7 @@ export default async function PostPage({
         </div>
         <NotionPage post={post} recordMap={recordMap} />
       </article>
-      <RelatedPosts posts={relatedPosts} />
+      {/* <RelatedPosts posts={relatedPosts} /> */}
     </>
   );
 }

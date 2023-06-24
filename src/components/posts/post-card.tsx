@@ -13,8 +13,8 @@ export default function PostCard({
 }) {
   return (
     <Link href={`/blog/${slug}`}>
-      <article className="mx-auto flex flex-col overflow-hidden rounded-xl shadow-xl shadow-gray-400 transition-all duration-300 hover:scale-[1.005] hover:shadow-2xl dark:shadow-black">
-        <div className="relative h-60">
+      <article className="mx-auto flex flex-col overflow-hidden rounded-md shadow-sm shadow-gray-300 transition-all duration-300 hover:shadow-md dark:shadow-black lg:flex-row">
+        <div className="relative h-80 w-full lg:w-1/3">
           <Image
             src={cover}
             alt="cover image"
@@ -22,9 +22,11 @@ export default function PostCard({
             style={{ objectFit: 'cover' }}
           />
         </div>
-        <div className="flex h-48 flex-col p-4">
-          <h3 className="line-clamp-2 h-16 text-2xl font-bold">{title}</h3>
-          <time className="mb-4 mt-2 pl-2 text-sm text-gray-400">{date}</time>
+        <div className="flex h-60 flex-col justify-between p-4 lg:h-80 lg:w-2/3">
+          <div>
+            <h3 className="mb-3 line-clamp-2 text-2xl font-light">{title}</h3>
+            <time className="mb-2 mt-2 text-sm text-gray-300">{date}</time>
+          </div>
           <CategoryList categories={categories} />
         </div>
       </article>

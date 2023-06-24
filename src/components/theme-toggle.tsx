@@ -21,10 +21,7 @@ export default function ThemeToggle() {
           {theme === 'light' ? (
             <BsMoon className={iconCN} onClick={() => setTheme('dark')} />
           ) : (
-            <BsMoonFill
-              className={`${iconCN} text-black`}
-              onClick={() => setTheme('dark')}
-            />
+            <BsMoonFill className={`${iconCN} text-black`} />
           )}
         </>
       )}
